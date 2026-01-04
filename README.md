@@ -6,7 +6,7 @@
 
 ## 🛠️ Tecnologías Principales
 - **Framework:** .NET (ASP.NET Core)
-- **IA:** Google Gemini 1.5 Flash
+- **IA:** Google Gemini 2.5 Flash
 - **Integración:** Google Calendar API
 - **Lenguaje:** C#
 
