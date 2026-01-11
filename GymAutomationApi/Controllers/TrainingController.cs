@@ -20,27 +20,8 @@ namespace GymAutomationApi.Controllers
         [HttpPost("process-workout")]
         public async Task<IActionResult> ProcessWorkout([FromBody] WorkoutRequest request)
         {
-            if (string.IsNullOrEmpty(request.RawMessage)) return BadRequest(new
-            {
-                error = "El mensaje no puede estar vacio."
-            });
-
-            try
-            {
-                var result = await geminiService.ProcessedWorkout(request);
-                return Ok(new
-                {
-                    response = result
-                });
-            }
-            catch (Exception ex)
-            {
-                return StatusCode(StatusCodes.Status500InternalServerError, new
-                {
-                    error = "Ocurrió un error al procesar el mensaje.",
-                    details = ex.Message
-                });
-            }
+            var result = await geminiService.ProcessedWorkout(request);
+            return Ok(result);
         }
 
     }

@@ -1,7 +1,9 @@
-﻿namespace GymAutomationApi.Interfaces
+﻿using GymAutomationApi.Models;
+
+namespace GymAutomationApi.Interfaces
 {
     public interface ICalendarService
     {
-        Task<bool> UpdateCalendarEvent(string processedData);
+        Task<CalendarResponse> UpdateCalendarEvent(WorkoutExtraction processedData);
     }
 }

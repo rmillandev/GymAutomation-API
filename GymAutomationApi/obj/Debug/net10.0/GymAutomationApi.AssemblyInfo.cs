@@ -15,7 +15,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GymAutomationApi")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+aa19ae396c881d923df8f5cf4f3613cd547d17a3")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cbd4f341b88d427c0020dcc0aceed1a7a4bf0e0c")]
 [assembly: System.Reflection.AssemblyProductAttribute("GymAutomationApi")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GymAutomationApi")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,5 +1,6 @@
 using GymAutomationApi.Configuration;
 using GymAutomationApi.Interfaces;
+using GymAutomationApi.Middleware;
 using GymAutomationApi.Services;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -16,9 +17,11 @@ builder.Services.Configure<GeminiConfig>(builder.Configuration.GetSection("Gemin
 builder.Services.Configure<GoogleConfig>(builder.Configuration.GetSection("GoogleConfig"));
 
 builder.Services.AddScoped<IGeminiService, GeminiService>();
-builder.Services.AddScoped<ICalendarService, CalendarService>();
+builder.Services.AddScoped<ICalendarService, GoogleCalendarService>();
 
 var app = builder.Build();
+
+app.UseExceptionHandling();
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())
